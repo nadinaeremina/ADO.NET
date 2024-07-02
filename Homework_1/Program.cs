@@ -28,10 +28,10 @@ namespace Homework_1
                     "[Event_poster].[events_].[Event_category] eca on en.Event_categoryId = eca.ID where " +
                     "eca.Title = N'Детям' and ec.Date_ > '2024-06-25'",
 
-                sqlcommand_3 = "delete from [Event_poster].[sold].[Buy_tickets] where id = 1",
+                sqlcommand_3 = "delete from [Event_poster].[sold].[Buy_tickets] where id = 2",
 
                 sqlcommand_4 = "update [Event_poster].[sold].[Buy_tickets] set [Value_] = 4500.00 " +
-                    "where id = 2",
+                    "where id = 3",
 
                 sqlcommand_5 = "select count(en.Title), ec.Date_ as N'Дата:' from " +
                     "[Event_poster].[events_].[Event_content] ec join [Event_poster].[events_].[Event_name]" +
@@ -67,7 +67,7 @@ namespace Homework_1
                 //    var f0 = dr_2[0];
                 //    var f2 = dr_2[2];
                 //    var f3 = dr_2[3];
-                //    Console.WriteLine($"{f0,4} {f2,4} {f3,4}");
+                //    Console.WriteLine($"{f0,4} {(DateTime)f2,4:dd/MM/yyyy} {f3,4}");
                 //}
 
                 //Console.WriteLine("\n");
@@ -76,12 +76,14 @@ namespace Homework_1
 
                 // 1
 
+                // Прикреплено 2 Скриншота называются "Удаление-до" и "Удаление-после"
                 //SqlCommand cmd_3 = new SqlCommand(sqlcommand_3, conn);
                 //int res = cmd_3.ExecuteNonQuery();
                 //Console.WriteLine("Ok");
 
                 // 2
 
+                // Прикреплено 2 Скриншота называются "Изменение-до" и "Изменение-после"
                 //SqlCommand cmd_4 = new SqlCommand(sqlcommand_4, conn);
                 //int res = cmd_4.ExecuteNonQuery();
                 //Console.WriteLine("Ok");
@@ -97,9 +99,10 @@ namespace Homework_1
 
                 // 2
 
-                SqlCommand cmd_6 = new SqlCommand(sqlcommand_6, conn);
-                object res = cmd_6.ExecuteScalar();
-                Console.WriteLine($"У клиента с id = 236 куплено билетов на общую сумму: {res}");
+                //SqlCommand cmd_6 = new SqlCommand(sqlcommand_6, conn);
+                //object res = cmd_6.ExecuteScalar();
+                //Console.WriteLine($"У клиента с id = 236 куплено билетов на общую сумму: {Convert.ToDouble(res)}");
+                //Console.WriteLine("\n");
             }
         }
     }
