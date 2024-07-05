@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EF.CodeFirst.Models
+namespace Exam
 {
-    [Table (name:"Countries")]
-    public class Country
+    [Table(name: "Places")]
+    public class Place
     {
         [Key]
         public int ID { get; set; }
-        public string NameCountry { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public City city { get; set; }
     }
 }

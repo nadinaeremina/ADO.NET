@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace EF.CodeFirst.Models
+namespace Exam
 {
-    [Table (name:"Countries")]
+    [Table(name: "Countries")]
     public class Country
     {
         [Key]
-        public int ID { get; set; }
-        public string NameCountry { get; set; }
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
     }
 }

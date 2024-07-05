@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EF.CodeFirst.Models
+namespace CodeFirst_test
 {
-    [Table (name:"Countries")]
-    public class Country
+    [Table(name: "Customers")]
+    public class Customer
     {
         [Key]
         public int ID { get; set; }
-        public string NameCountry { get; set; }
+        [Required]
+        public string FN { get; set; }
+        [Required]
+        public string LN { get; set; }
+        [Required]
+        public int NCard { get; set; }
     }
 }
