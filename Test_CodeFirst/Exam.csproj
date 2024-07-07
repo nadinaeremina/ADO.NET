@@ -59,11 +59,21 @@
     <Compile Include="City.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Data_Layer_folder\Date_Layer_model.cs" />
     <Compile Include="EventsDbContext.cs" />
     <Compile Include="Event_archive.cs" />
     <Compile Include="Event_category.cs" />
     <Compile Include="Event_content.cs" />
     <Compile Include="Event_name.cs" />
+    <Compile Include="Models\Buy_tickets_model.cs" />
+    <Compile Include="Models\City_model.cs" />
+    <Compile Include="Models\Client_model.cs" />
+    <Compile Include="Models\Country_model.cs" />
+    <Compile Include="Models\Event_archive-model.cs" />
+    <Compile Include="Models\Event_category_model.cs" />
+    <Compile Include="Models\Event_content_model.cs" />
+    <Compile Include="Models\Event_name_model.cs" />
+    <Compile Include="Models\Place_model.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +82,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

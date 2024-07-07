@@ -49,6 +49,8 @@ namespace My_DataLayer
                 Console.WriteLine($"teacher {id_2} delete");
             else
                 Console.WriteLine($"teacher {id_2} not delete");
+
+
         }
     }
 }
