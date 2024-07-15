@@ -14,7 +14,9 @@ namespace My_DataLayer.Data_Layer_folder
         // сюда можно вынести строку для подключения, чтобы она не была в 'main' - она будет статическим св-вом
         // 'Data Layer' - это статический класс - создаем статическое св-во 'connectionstring'
         //  в данном случае у 'set' установили дефолтное знчение
+        // класс будет статическим, тк нам не нужно создавать экземпляры класс, а нужно только обращаться к методам
         public static string connectionstring { get; set; } = ConfigurationManager.ConnectionStrings["Academy_add"].ConnectionString;
+        // создаем вложенные классы
         public static class Teacher // наш первый класс // также можно здесь создавать и другие классы ('Student')
         {
             // TeacherById // метод

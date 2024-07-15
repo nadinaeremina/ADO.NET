@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.IO; // подключаем
+using System.IO;
 using System.Drawing.Imaging;
-using System.Windows.Media.Imaging;
 
-namespace Academy_picture
+namespace Pictures_for_events
 {
     public partial class Form1 : Form
     {
@@ -22,22 +21,20 @@ namespace Academy_picture
         DataSet ds = null;
         string fileName = "";
         string str = "";
-
         public Form1()
         {
             InitializeComponent();
-            str = ConfigurationManager.ConnectionStrings["Academy_add"].ConnectionString;
+            str = ConfigurationManager.ConnectionStrings["Events"].ConnectionString;
             conn = new SqlConnection(str);
         }
 
-        private void button_load_picture_Click(object sender, EventArgs e)
+        private void button_load_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-
-            // картинки только графического расширения
-            ofd.Filter = "Графические файлы |*.bmp; *.png; *.gif; *.jpg";
+            ofd.Filter = "Графические файлы |*.bmp; *.jpg; *.png; *.jpeg";
             ofd.FileName = "";
-            if(ofd.ShowDialog() == DialogResult.OK)
+
+            if (ofd.ShowDialog()==DialogResult.OK)
             {
                 fileName = ofd.FileName;
                 LoadPicture();
@@ -50,20 +47,18 @@ namespace Academy_picture
             {
                 byte[] bytes = CreateCopy();
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into dbo.Teacher_picture(Name_, Picture," +
-                    " TeacherId) values (@name, @picture, @teacherId);", conn);
-
+                SqlCommand cmd = new SqlCommand("insert into dbo.Pictures(Title, Picture, Event_category_id)" +
+                    "values (@title, @picture, @event_category);", conn);
                 if (textBox1.Text == null || textBox1.Text.Length == 0) return;
 
                 int index = -1;
-                // нужно спарсить текст из текстбокса в тип 'int'
                 int.TryParse(textBox1.Text, out index);
 
-                if (index == -1) return; // вдруг не произошло конвертирование
+                if (index == -1) return;
 
-                cmd.Parameters.Add("@name", SqlDbType.NVarChar, 255).Value = fileName;
+                cmd.Parameters.Add("@title", SqlDbType.NVarChar, 255).Value = fileName;
                 cmd.Parameters.Add("@picture", SqlDbType.Image, bytes.Length).Value = bytes;
-                cmd.Parameters.Add("@teacherId", SqlDbType.Int, 255).Value = index;
+                cmd.Parameters.Add("@event_category", SqlDbType.Int).Value = index;
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
@@ -71,21 +66,18 @@ namespace Academy_picture
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
         }
 
         private byte[] CreateCopy()
         {
-            // это часть для того, чтобы картинки меньше веcили
             Image img = Image.FromFile(fileName);
-
             int maxWidth = 300, maxHeight = 300;
 
-            double rationX = (double)maxWidth / img.Width;
-            double rationY = (double)maxHeight / img.Height;
+            double ratioX = (double)maxWidth / img.Width;
+            double ratioY = (double)maxHeight / img.Height;
 
-            double ratio = Math.Min(rationX, rationY);
+            double ratio = Math.Min(ratioX, ratioY);
 
             int newWidth = (int)(img.Width * ratio);
             int newHeight = (int)(img.Height * ratio);
@@ -104,13 +96,13 @@ namespace Academy_picture
             return buf;
         }
 
-        private void button_show_one_Click(object sender, EventArgs e)
+        private void button_show_Click(object sender, EventArgs e)
         {
             try
             {
                 if (textBox1.Text == null || textBox1.Text.Length == 0)
                 {
-                    MessageBox.Show("Укажите id преподавателя");
+                    MessageBox.Show("Укажите id события");
                     return;
                 }
 
@@ -119,12 +111,12 @@ namespace Academy_picture
 
                 if (index == -1)
                 {
-                    MessageBox.Show("Укажите id преподавателя  в правильном формате");
+                    MessageBox.Show("Укажите id события правильно!");
                     return;
                 }
 
                 // работаем в отсоединенном режиме
-                da = new SqlDataAdapter("select Picture from dbo.Teacher_picture where TeacherId=@id", conn);
+                da = new SqlDataAdapter("select Picture from dbo.Pictures where Event_category_id=@id", conn);
                 SqlCommandBuilder cmb = new SqlCommandBuilder(da);
                 da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = index;
                 ds = new DataSet();
@@ -143,7 +135,7 @@ namespace Academy_picture
         {
             try
             {
-                da = new SqlDataAdapter("select * from dbo.Teacher_picture;", conn);
+                da = new SqlDataAdapter("select * from dbo.Pictures;", conn);
                 SqlCommandBuilder cmd = new SqlCommandBuilder(da);
                 ds = new DataSet();
                 da.Fill(ds, "picture");
@@ -153,6 +145,18 @@ namespace Academy_picture
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string procedure = "dbo.add_pictures_onevents"; 
+            SqlCommand cmd = new SqlCommand(procedure, conn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }

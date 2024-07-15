@@ -10,16 +10,16 @@ namespace Exam.Models
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public City city { get; set; }
-        public Place_model(int _id, string _title, City _city)
+        public int city_id { get; set; }
+        public Place_model(/*int _id, */string _title, int _city_id)
         {
-            ID = _id;
+            // ID = _id;
             Title = _title;
-            city = _city;
+            city_id = _city_id;
         }
         public override string ToString()
         {
-            return $"{ID,5} {Title,15} {city,15} ";
+            return $"{Title,15} {city_id,15} ";
         }
     }
 }

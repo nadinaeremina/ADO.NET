@@ -8,14 +8,14 @@ namespace Exam.Models
 {
     public class Buy_tickets_model
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public decimal Value { get; set; }
         public DateTime date_of_bought { get; set; }
-        public Client_model client { get; set; }
-        public Event_name_model event_name { get; set; }
-        public Buy_tickets_model(int _id, decimal _value, DateTime _date_of_bought, Client_model _client, Event_name_model _event_name)
+        public int client { get; set; }
+        public int event_name { get; set; }
+        public Buy_tickets_model(/*int _id,*/ decimal _value, DateTime _date_of_bought, int _client, int _event_name)
         {
-            Id = _id;
+            //Id = _id;
             Value = _value;
             date_of_bought = _date_of_bought;
             client = _client;
@@ -23,7 +23,7 @@ namespace Exam.Models
         }
         public override string ToString()
         {
-            return $"{Id,5} {Value,10} {date_of_bought,10} {client,25} {event_name,10}";
+            return $" {Value,10} {date_of_bought,10} {client,25} {event_name,10}";
         }
     }
 }

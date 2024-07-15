@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_DataLayer", "My_DataLaye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_to_SQL", "Linq_to_SQL\Linq_to_SQL.csproj", "{A7BDB6E4-B44F-4212-B223-186DA9261BB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictures_for_events", "Pictures_for_events\Pictures_for_events.csproj", "{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{A7BDB6E4-B44F-4212-B223-186DA9261BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7BDB6E4-B44F-4212-B223-186DA9261BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7BDB6E4-B44F-4212-B223-186DA9261BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

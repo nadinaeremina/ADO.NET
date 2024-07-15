@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B1156851-2B1E-483C-9071-16A5A1BDF866}</ProjectGuid>
+    <ProjectGuid>{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Academy_picture</RootNamespace>
-    <AssemblyName>Academy_picture</AssemblyName>
+    <RootNamespace>Pictures_for_events</RootNamespace>
+    <AssemblyName>Pictures_for_events</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

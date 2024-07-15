@@ -15,23 +15,36 @@ namespace Exam
         {
             //var db = new EventsDbContext();
 
+            //// создаем несколько об-ов 
+            ////1
+
             //Event_category event_cat = new Event_category();
             //event_cat.Title = "Спектакль";
+
+            ////2
 
             //Event_name event_name = new Event_name();
             //event_name.Title = "Левша";
             //event_name.event_category = event_cat;
 
+            ////3
+
             //Country country = new Country();
             //country.Title = "Россия";
+
+            ////4
 
             //City city = new City();
             //city.Title = "Санкт-Петербург";
             //city.country = country;
 
+            ////5
+
             //Place place_1 = new Place();
             //place_1.Title = "ДК им.Ленсовета";
             //place_1.city = city;
+
+            ////6
 
             //Event_content event_con = new Event_content();
             //event_con.event_name = event_name;
@@ -43,6 +56,7 @@ namespace Exam
             //event_con.Max_tickets = 700;
             //event_con.Sold_tickets = 700;
 
+            ////7
             //Client client_1 = new Client();
             //client_1.First_name = "Иван";
             //client_1.Last_name = "Иванов";
@@ -50,11 +64,14 @@ namespace Exam
             //client_1.Email = "ivan1@mail.ru";
             //client_1.Birthday = new DateTime(2000,03,12);
 
+            ////8
             //Buy_ticket buy_ticket = new Buy_ticket();
             //buy_ticket.Value = 5000;
             //buy_ticket.date_of_bought = new DateTime(2024,06,22);
             //buy_ticket.client = client_1;
             //buy_ticket.event_name = event_name;
+
+            //// добавим в каждую табличку нашей БД 1 строку 
 
             //db.event_categories.Add(event_cat);
             //db.event_Names.Add(event_name);
@@ -65,18 +82,20 @@ namespace Exam
             //db.clients.Add(client_1);
             //db.buy_Tickets.Add(buy_ticket);
 
+            //// сохраним изменения
+
             //db.SaveChanges();
 
-            //1
+            ////1 Добавление категорий
             //string[] ev_cat = { "Концерт", "Выставка", "Цирк", "Спорт", "Семинапы и тренинги", "Кино", "Юмор", "Вечеринки", "Детям", "Другое" };
 
             //foreach (string item in ev_cat)
             //    Date_Layer_model.Event_category.Insert(item);
 
-            //2
+            ////2 Добавление страны
             //Date_Layer_model.Country.Insert("Казахстан");
 
-            //3
+            ////3 Добавление городов
             //string[] cities = { "Москва", "Алматы", "Астана"};
 
             //for (int i = 0; i < cities.Length; i++)
@@ -87,8 +106,9 @@ namespace Exam
             //        Date_Layer_model.City.Insert(cities[i], 1);
             //}
 
-            //4
+            ////4 Добавление клиентов
             //List<Client_model> clients = new List<Client_model> ();
+
             //clients.Add(new Client_model("Петр", "Афаеасьев", "Иванович", "alt3@mail.ru", new DateTime(2001, 04, 12)));
             //clients.Add(new Client_model("Афанасий", "Петров", "Иванович", "alt4@mail.ru", new DateTime(2000, 04, 12)));
             //clients.Add(new Client_model("Николай", "Солнцев", "Иванович", "alt5@mail.ru", new DateTime(2002, 04, 12)));
@@ -118,7 +138,7 @@ namespace Exam
             //clients.Add(new Client_model("Иван", "Метелкин", "Иванович", "alt29@mail.ru", new DateTime(2001, 04, 12)));
             //clients.Add(new Client_model("Денис", "Маслов", "Иванович", "alt3@mail.ru", new DateTime(2001, 04, 12)));
             //clients.Add(new Client_model("Иван", "Ильясов", "Иванович", "alt31@mail.ru", new DateTime(2000, 04, 12)));
-           
+
             //clients.Add(new Client_model("Альберт", "Соколов", "Иванович", "alt32@mail.ru", new DateTime(2008, 04, 12)));
             //clients.Add(new Client_model("Петр", "Алладинов", "Иванович", "alt33@mail.ru", new DateTime(2001, 04, 12)));
             //clients.Add(new Client_model("Афанасий", "Повозов", "Иванович", "alt34@mail.ru", new DateTime(2001, 04, 12)));
@@ -338,7 +358,727 @@ namespace Exam
             //foreach (var item in clients)
             //    Date_Layer_model.Client.Insert(item);
 
-            //5
+            ////5 Добавление
+            //List<Event_name_model> ev_names = new List<Event_name_model> ();
+
+            //ev_names.Add(new Event_name_model("Дон Кихот", 1));
+            //ev_names.Add(new Event_name_model("Князь Игорь",1));
+            //ev_names.Add(new Event_name_model("Очарованный странник",1));
+            //ev_names.Add(new Event_name_model("Евгений Онегин",1));
+            //ev_names.Add(new Event_name_model("Мастер и Маргарита",1));
+            //ev_names.Add(new Event_name_model("Женитьба",1));
+            //ev_names.Add(new Event_name_model("Собачье сердце",1));
+            //ev_names.Add(new Event_name_model("Тетка чарли",1));
+            //ev_names.Add(new Event_name_model("Головлевы",1));
+            //ev_names.Add(new Event_name_model("Сурганова и оркестр",2));
+            //ev_names.Add(new Event_name_model("Хор Турецкого",2));
+            //ev_names.Add(new Event_name_model("Рок-острова",2));
+            //ev_names.Add(new Event_name_model("Акустический блюз",2));
+            //ev_names.Add(new Event_name_model("Латиноамериканские ритмы",2));
+            //ev_names.Add(new Event_name_model("Милен Фармер",2));
+            //ev_names.Add(new Event_name_model("Пол Макартни",2));
+            //ev_names.Add(new Event_name_model("Симфонический оркестр",2));
+            //ev_names.Add(new Event_name_model("Стас Михайлов",2));
+            //ev_names.Add(new Event_name_model("Библиотека служит людям",3));
+            //ev_names.Add(new Event_name_model("Мистическая Африка",3));
+            //ev_names.Add(new Event_name_model("Александр Сергеевич Пушкин",3));
+            //ev_names.Add(new Event_name_model("Вижу космос",3));
+            //ev_names.Add(new Event_name_model("Давайте просто любить жизнь!",3));
+            //ev_names.Add(new Event_name_model("У победы наши лица",3));
+            //ev_names.Add(new Event_name_model("Каникулы с книгой",3));
+            //ev_names.Add(new Event_name_model("Образы России",3));
+            //ev_names.Add(new Event_name_model("Сердце не камень",3));
+            //ev_names.Add(new Event_name_model("Лето красное встречаем",3));
+            //ev_names.Add(new Event_name_model("Россия моя - история",3));
+            //ev_names.Add(new Event_name_model("История ВДВ",3));
+            //ev_names.Add(new Event_name_model("Высшие ценности царской семьи",3));
+            //ev_names.Add(new Event_name_model("Тайны ледяного материка",3));
+            //ev_names.Add(new Event_name_model("Антигравитация",4));
+            //ev_names.Add(new Event_name_model("Легенда",4));
+            //ev_names.Add(new Event_name_model("Матрешка",4));
+            //ev_names.Add(new Event_name_model("Грани Георгия Гараняна",4));
+            //ev_names.Add(new Event_name_model("Шоу зверей",4));
+            //ev_names.Add(new Event_name_model("Идол-2024",4));
+            //ev_names.Add(new Event_name_model("Кудзинов",4));
+            //ev_names.Add(new Event_name_model("Как создать вселенную",4));
+            //ev_names.Add(new Event_name_model("Карнавал магии",4));
+            //ev_names.Add(new Event_name_model("Артист",4));
+            //ev_names.Add(new Event_name_model("Дурацкий цЫрк",4));
+            //ev_names.Add(new Event_name_model("Гарри и школа волшебства",4));
+            //ev_names.Add(new Event_name_model("Империя хищников",4));
+            //ev_names.Add(new Event_name_model("Волшебная лампа",4));
+            //ev_names.Add(new Event_name_model("Цирк-шапито",4));
+            //ev_names.Add(new Event_name_model("Ледниковый период",4));
+            //ev_names.Add(new Event_name_model("Турнир по боксу",5));
+            //ev_names.Add(new Event_name_model("Футбольная лига",5));
+            //ev_names.Add(new Event_name_model("Плавание",5));
+            //ev_names.Add(new Event_name_model("Профессиональный бокс",5));
+            //ev_names.Add(new Event_name_model("Шоу каскадеров",5));
+            //ev_names.Add(new Event_name_model("Фехтование",5));
+            //ev_names.Add(new Event_name_model("Борьба на поясах",5));
+            //ev_names.Add(new Event_name_model("Легкая атлетика",5));
+            //ev_names.Add(new Event_name_model("Фмгурное катание",5));
+            //ev_names.Add(new Event_name_model("Хоккей",5));
+            //ev_names.Add(new Event_name_model("Биатлон",5));
+            //ev_names.Add(new Event_name_model("Формула-1",5));
+            //ev_names.Add(new Event_name_model("Шахмаиы",5));
+            //ev_names.Add(new Event_name_model("Теннис",5));
+            //ev_names.Add(new Event_name_model("Велоспорт",5));
+            //ev_names.Add(new Event_name_model("Летние виды спорта",5));
+            //ev_names.Add(new Event_name_model("Зимние виды спорта",5));
+            //ev_names.Add(new Event_name_model("Биохакинг",6));
+            //ev_names.Add(new Event_name_model("Курс по управлению командой",6));
+            //ev_names.Add(new Event_name_model("Бизнес-конференция",6));
+            //ev_names.Add(new Event_name_model("Гипноз без гипноза",6));
+            //ev_names.Add(new Event_name_model("Нейротехнология блоков",6));
+            //ev_names.Add(new Event_name_model("Торговля и складской учет",6));
+            //ev_names.Add(new Event_name_model("Методист онлайн-курсов",6));
+            //ev_names.Add(new Event_name_model("Нейросети для каждого",6));
+            //ev_names.Add(new Event_name_model("Кредиторская задолженность",6));
+            //ev_names.Add(new Event_name_model("Построение системы управления",6));
+            //ev_names.Add(new Event_name_model("Школа продаж",6));
+            //ev_names.Add(new Event_name_model("Маркетинговая воронка",6));
+            //ev_names.Add(new Event_name_model("Система менеджмента",6));
+            //ev_names.Add(new Event_name_model("Аренда и лизинг",6));
+            //ev_names.Add(new Event_name_model("Искусство управлять собой",6));
+            //ev_names.Add(new Event_name_model("Бизнес-аналитик",6));
+            //ev_names.Add(new Event_name_model("Семинар для психологов",6));
+            //ev_names.Add(new Event_name_model("Головоломка",7));
+            //ev_names.Add(new Event_name_model("Унесенные призраками",7));
+            //ev_names.Add(new Event_name_model("Тур с Иванушками",7));
+            //ev_names.Add(new Event_name_model("Три богатыря",7));
+            //ev_names.Add(new Event_name_model("10 жизней",7));
+            //ev_names.Add(new Event_name_model("Манюня",7));
+            //ev_names.Add(new Event_name_model("Непослушники",7));
+            //ev_names.Add(new Event_name_model("Семейный переполох",7));
+            //ev_names.Add(new Event_name_model("Майор Гром",7));
+            //ev_names.Add(new Event_name_model("Бар Москва Чики",7));
+            //ev_names.Add(new Event_name_model("Заклятье",7));
+            //ev_names.Add(new Event_name_model("Фуриоса",7));
+            //ev_names.Add(new Event_name_model("Мой любимый чемпион",7));
+            //ev_names.Add(new Event_name_model("Бывший в помощь",7));
+            //ev_names.Add(new Event_name_model("Горизонты",7));
+            //ev_names.Add(new Event_name_model("Только течет река",7));
+            //ev_names.Add(new Event_name_model("Клуб Зеро",7));
+            //ev_names.Add(new Event_name_model("Импровизация",8));
+            //ev_names.Add(new Event_name_model("Уральские пельмени",8));
+            //ev_names.Add(new Event_name_model("Вечерний Ургант",8));
+            //ev_names.Add(new Event_name_model("Однажды в России",8));
+            //ev_names.Add(new Event_name_model("ПрожекторПерисХилтон",8));
+            //ev_names.Add(new Event_name_model("КВН",8));
+            //ev_names.Add(new Event_name_model("Камеди Клаб",8));
+            //ev_names.Add(new Event_name_model("Камеди Вумен",8));
+            //ev_names.Add(new Event_name_model("Городок",8));
+            //ev_names.Add(new Event_name_model("Гле логика?",8));
+            //ev_names.Add(new Event_name_model("ХБ",8));
+            //ev_names.Add(new Event_name_model("Большой вопрос",8));
+            //ev_names.Add(new Event_name_model("Камеди Батл",8));
+            //ev_names.Add(new Event_name_model("Убойной ночи",8));
+            //ev_names.Add(new Event_name_model("Большая разница",8));
+            //ev_names.Add(new Event_name_model("Смеяться разрешается",8));
+            //ev_names.Add(new Event_name_model("Кривое зеркало",8));
+            //ev_names.Add(new Event_name_model("Открытый микрофон",8));
+            //ev_names.Add(new Event_name_model("Смехопанорама",8));
+            //ev_names.Add(new Event_name_model("Петросян-шоу",8));
+            //ev_names.Add(new Event_name_model("Танцплощадка",9));
+            //ev_names.Add(new Event_name_model("Дискотека 90-х",9));
+            //ev_names.Add(new Event_name_model("День рождения Андрея Резника",9));
+            //ev_names.Add(new Event_name_model("Вечеринка ретро",9));
+            //ev_names.Add(new Event_name_model("Дыхание ночи",9));
+            //ev_names.Add(new Event_name_model("Выпускной",9));
+            //ev_names.Add(new Event_name_model("Для своих",9));
+            //ev_names.Add(new Event_name_model("Вечер Ивана Купала",9));
+            //ev_names.Add(new Event_name_model("Баварские радости",9));
+            //ev_names.Add(new Event_name_model("Король Лев",10));
+            //ev_names.Add(new Event_name_model("Винни Пух",10));
+            //ev_names.Add(new Event_name_model("Волшебник Изумруднго города",10));
+            //ev_names.Add(new Event_name_model("Золушка",10));
+            //ev_names.Add(new Event_name_model("Парк Чудес",10));
+            //ev_names.Add(new Event_name_model("Счастливый принц",10));
+            //ev_names.Add(new Event_name_model("Красная шапочка",10));
+            //ev_names.Add(new Event_name_model("Кто сказал мяу",10));
+            //ev_names.Add(new Event_name_model("Тридевятое царство",10));
+            //ev_names.Add(new Event_name_model("Апельсиновые сказки",10));
+            //ev_names.Add(new Event_name_model("Музейные занятия для детей",10));
+            //ev_names.Add(new Event_name_model("Динопарк",10));
+            //ev_names.Add(new Event_name_model("Муравей по имени Бигги",10));
+            //ev_names.Add(new Event_name_model("Мышонок Криспи",10));
+            //ev_names.Add(new Event_name_model("Сказка в Лукоморье",10));
+            //ev_names.Add(new Event_name_model("Лев и мышка-никудышка",10));
+            //ev_names.Add(new Event_name_model("Ни дать, ни зять", 11));
+            //ev_names.Add(new Event_name_model("Научи меня жить",11));
+            //ev_names.Add(new Event_name_model("Скрипач на крыше",11));
+            //ev_names.Add(new Event_name_model("Не в свои сани не садись",11));
+            //ev_names.Add(new Event_name_model("Одолжите тренера",11));
+            //ev_names.Add(new Event_name_model("Декабристы",11));
+            //ev_names.Add(new Event_name_model("Девушка на миллион",11));
+            //ev_names.Add(new Event_name_model("Жизель",11));
+            //ev_names.Add(new Event_name_model("Иммерсивный театр",11));
+
+            //foreach (var item in ev_names)
+            //    Date_Layer_model.Event_name.Insert(item);
+
+            ////6
+            //List<Place_model> places = new List<Place_model>();
+
+            //places.Add(new Place_model("ДК им.Ленсовета", 1));
+            //places.Add(new Place_model("ДК Выборгский", 1));
+            //places.Add(new Place_model("Колизей", 1));
+            //places.Add(new Place_model("Пространство Флагшток", 1));
+            //places.Add(new Place_model("Ледовый Дворец", 1));
+            //places.Add(new Place_model("Зеленый театр", 1));
+            //places.Add(new Place_model("Культурный квартал", 1));
+            //places.Add(new Place_model("Экспофорум", 1));
+            //places.Add(new Place_model("Марс", 1));
+            //places.Add(new Place_model("Цирк на Фонтанке", 1));
+            //places.Add(new Place_model("Цирк чудес", 1));
+            //places.Add(new Place_model("Упсала-Цирк", 1));
+            //places.Add(new Place_model("Спорткомплекс", 1));
+            //places.Add(new Place_model("Газпром Арена", 1));
+            //places.Add(new Place_model("Кировец", 1));
+            //places.Add(new Place_model("Бизнес квартира", 1));
+            //places.Add(new Place_model("Особняк Мясникова", 1));
+            //places.Add(new Place_model("Академия бизнес", 1));
+            //places.Add(new Place_model("Аврора", 1));
+            //places.Add(new Place_model("Дом кино", 1));
+            //places.Add(new Place_model("Мираж Синема", 1));
+            //places.Add(new Place_model("Дворец Олимпия", 1));
+            //places.Add(new Place_model("Великан Парк", 1));
+            //places.Add(new Place_model("Культурный центр Троицкий", 1));
+            //places.Add(new Place_model("Аврора Концерт Холл", 1));
+            //places.Add(new Place_model("Космонавт", 1));
+            //places.Add(new Place_model("Чаплин Холл", 1));
+            //places.Add(new Place_model("Лес чудес", 1));
+            //places.Add(new Place_model("Чудополист", 1));
+            //places.Add(new Place_model("Детский дворец", 1));
+            //places.Add(new Place_model("Фамиленд", 1));
+            //places.Add(new Place_model("Ивента Лофт", 1));
+            //places.Add(new Place_model("Дом офицеров", 1));
+            //places.Add(new Place_model("Центральный дом актера", 2));
+            //places.Add(new Place_model("Театр Комедии", 2));
+            //places.Add(new Place_model("Московский дворец молодежи", 2));
+            //places.Add(new Place_model("Зеленый театр ВДНХ", 2));
+            //places.Add(new Place_model("Лужникики", 2));
+            //places.Add(new Place_model("ЦСКА Арена", 2));
+            //places.Add(new Place_model("Сад имени Баумана", 2));
+            //places.Add(new Place_model("Центр современного искусства", 2));
+            //places.Add(new Place_model("Люмьер Холл", 2));
+            //places.Add(new Place_model("Цирк Братьев Запашных", 2));
+            //places.Add(new Place_model("Црк Никуллина", 2));
+            //places.Add(new Place_model("Большой Московский цирк", 2));
+            //places.Add(new Place_model("ВТБ Арена", 2));
+            //places.Add(new Place_model("Спартаковец", 2));
+            //places.Add(new Place_model("РЖД Арена", 2));
+            //places.Add(new Place_model("Центральный дом архитектора", 2));
+            //places.Add(new Place_model("Центральный дом литераторов", 2));
+            //places.Add(new Place_model("КЗ Измайлово", 2));
+            //places.Add(new Place_model("Иллюзион", 2));
+            //places.Add(new Place_model("Киномакс", 2));
+            //places.Add(new Place_model("Москино Космос", 2));
+            //places.Add(new Place_model("Концертный зал Барвиха", 2));
+            //places.Add(new Place_model("БКЗ Космос", 2));
+            //places.Add(new Place_model("КЗ Москва", 2));
+            //places.Add(new Place_model("Клуб Алиби", 2));
+            //places.Add(new Place_model("Пространство Суперметалл", 2));
+            //places.Add(new Place_model("КЦ Меридиан", 2));
+            //places.Add(new Place_model("СоюзМультКлуб", 2));
+            //places.Add(new Place_model("Театр кукол им.Образцова", 2));
+            //places.Add(new Place_model("Детлэнд", 2));
+            //places.Add(new Place_model("Атмосфера", 2));
+            //places.Add(new Place_model("ДК имени Горбунова", 2));
+            //places.Add(new Place_model("Парк Зарядье", 2));
+            //places.Add(new Place_model("Русский театр", 3));
+            //places.Add(new Place_model("Трансформа", 3));
+            //places.Add(new Place_model("Альянс-театр", 3));
+            //places.Add(new Place_model("Дворец спорта и культуры", 3));
+            //places.Add(new Place_model("Первомайские пруды", 3));
+            //places.Add(new Place_model("Дворец Республики", 3));
+            //places.Add(new Place_model("ВЦ Атакент", 3));
+            //places.Add(new Place_model("Дворец спрота им.Балуана", 3));
+            //places.Add(new Place_model("МВК Атакент-Экспо", 3));
+            //places.Add(new Place_model("Казахский Государственный цирк", 3));
+            //places.Add(new Place_model("КазАСТ", 3));
+            //places.Add(new Place_model("Асыл-Арман", 3));
+            //places.Add(new Place_model("Центральный стадион Алматы", 3));
+            //places.Add(new Place_model("БЦ Нурикон", 3));
+            //places.Add(new Place_model("Учебный центр Алматы", 3));
+            //places.Add(new Place_model("БЦ Женес", 3));
+            //places.Add(new Place_model("Кинпарк", 3));
+            //places.Add(new Place_model("Арман", 3));
+            //places.Add(new Place_model("Киностудия Алматы", 3));
+            //places.Add(new Place_model("Шоу Тудэй", 3));
+            //places.Add(new Place_model("Дилижанс Шоу", 3));
+            //places.Add(new Place_model("Мир Щоу", 3));
+            //places.Add(new Place_model("Бункер", 3));
+            //places.Add(new Place_model("Клуб Жесть", 3));
+            //places.Add(new Place_model("Жибек Жолы", 3));
+            //places.Add(new Place_model("Театр Жас Сахна", 3));
+            //places.Add(new Place_model("Театрон", 3));
+            //places.Add(new Place_model("Алем Парк", 3));
+            //places.Add(new Place_model("Алатау", 3));
+            //places.Add(new Place_model("Творческая академия", 3));
+            //places.Add(new Place_model("Тотальный театр", 3));
+            //places.Add(new Place_model("Дворец мира и согласия", 4));
+            //places.Add(new Place_model("Музыкальный театр", 4));
+            //places.Add(new Place_model("Русский драматический театр", 4));
+            //places.Add(new Place_model("Президентский центр Казахстана", 4));
+            //places.Add(new Place_model("Дворец Жастар", 4));
+            //places.Add(new Place_model("Конгресс-центр", 4));
+            //places.Add(new Place_model("Национальный музей", 4));
+            //places.Add(new Place_model("МВЦ Экспо", 4));
+            //places.Add(new Place_model("Хилтон Астана Отель", 4));
+            //places.Add(new Place_model("Столичный цирк", 4));
+            //places.Add(new Place_model("Астана Арена", 4));
+            //places.Add(new Place_model("Локомотив", 4));
+            //places.Add(new Place_model("Стадион Есиль", 4));
+            //places.Add(new Place_model("БЦ Номад", 4));
+            //places.Add(new Place_model("Деловой дом Алма-Ата", 4));
+            //places.Add(new Place_model("Центр образования Элкод ", 4));
+            //places.Add(new Place_model("Арсенал", 4));
+            //places.Add(new Place_model("Евразия синема", 4));
+            //places.Add(new Place_model("Муви Рум", 4));
+            //places.Add(new Place_model("Централ Стендап Групп", 4));
+            //places.Add(new Place_model("Салем Стендап", 4));
+            //places.Add(new Place_model("Камеди Астана", 4));
+            //places.Add(new Place_model("Клуб Ерлана Кокеева", 4));
+            //places.Add(new Place_model("Айкон Клуб", 4));
+            //places.Add(new Place_model("Клуб Зара", 4));
+            //places.Add(new Place_model("Театр кукол", 4));
+            //places.Add(new Place_model("Абу-даби Плаза", 4));
+            //places.Add(new Place_model("Центральный городской парк", 4));
+            //places.Add(new Place_model("Ледовый дворец Алау", 4));
+            //places.Add(new Place_model("ТРЦ Хан Шатыр", 4));
+            //places.Add(new Place_model("Стар Плэй", 4));
+
+            //foreach (var item in places)
+            //    Date_Layer_model.Place.Insert(item);
+
+            ////7
+
+            //List<Event_content_model> ev_con = new List<Event_content_model>();
+
+            //ev_con.Add(new Event_content_model(1, new DateTime(2024, 06, 21, 7, 8, 9), 1, "Левша", 7, 700, 700));
+            //ev_con.Add(new Event_content_model(2, new DateTime(2024, 06, 22, 7, 8, 9), 2, "Дон Кихот", 10, 800, 650));
+            //ev_con.Add(new Event_content_model(3, new DateTime(2024, 06, 23, 7, 8, 9), 3, "Князь Игорь", 14, 900, 850));
+            //ev_con.Add(new Event_content_model(4, new DateTime(2024, 06, 24, 7, 8, 9), 34, "Очарованный странник", 14, 500, 500));
+            //ev_con.Add(new Event_content_model(5, new DateTime(2024, 06, 20, 7, 8, 9), 35, "Евгений Онегин", 18, 400, 400));
+            //ev_con.Add(new Event_content_model(6, new DateTime(2024, 06, 21, 7, 8, 9), 36, "Мастер и Маргарита", 18, 500, 450));
+            //ev_con.Add(new Event_content_model(7, new DateTime(2024, 06, 25, 7, 8, 9), 67, "Женитьба", 18, 600, 300));
+            //ev_con.Add(new Event_content_model(8, new DateTime(2024, 06, 25, 7, 8, 9), 68, "Собачье сердце", 14, 800, 750));
+            //ev_con.Add(new Event_content_model(9, new DateTime(2024, 06, 25, 7, 8, 9), 69, "Тетка Чарли", 14, 900, 900));
+            //ev_con.Add(new Event_content_model(10, new DateTime(2024, 06, 25, 7, 8, 9), 98, "Головлевы", 14, 300, 300));
+            //ev_con.Add(new Event_content_model(4, new DateTime(2024, 06, 24, 7, 8, 9), 99, "Тетка Чарли", 14, 500, 450));
+            //ev_con.Add(new Event_content_model(5, new DateTime(2024, 06, 20, 7, 8, 9), 100, "Мастер и Маргарита", 18, 400, 350));
+            //ev_con.Add(new Event_content_model(11, new DateTime(2024, 06, 20, 7, 8, 9), 4, "Сурганова и оркестр", 14, 1700, 1650));
+            //ev_con.Add(new Event_content_model(12, new DateTime(2024, 06, 21, 7, 8, 9), 5, "Хор Турецкого", 14, 1000, 1000));
+            //ev_con.Add(new Event_content_model(13, new DateTime(2024, 06, 22, 7, 8, 9), 6, "Рок-острова", 14, 1500, 1450));
+            //ev_con.Add(new Event_content_model(14, new DateTime(2024, 06, 23, 7, 8, 9), 37, "Акустический блюз", 14, 900, 850));
+            //ev_con.Add(new Event_content_model(15, new DateTime(2024, 06, 24, 7, 8, 9), 38, "Латиноамериканские ритмы", 14, 2000, 2000));
+            //ev_con.Add(new Event_content_model(16, new DateTime(2024, 06, 25, 7, 8, 9), 39, "Милен фармер", 10, 3000, 2500));
+            //ev_con.Add(new Event_content_model(17, new DateTime(2024, 06, 26, 7, 8, 9), 70, "Пол Маккартни", 18, 2500, 2500));
+            //ev_con.Add(new Event_content_model(18, new DateTime(2024, 06, 26, 7, 8, 9), 71, "Симфонический оркестр", 14, 2000, 1150));
+            //ev_con.Add(new Event_content_model(19, new DateTime(2024, 06, 28, 7, 8, 9), 72, "Стас Михайлов", 14, 2100, 2000));
+            //ev_con.Add(new Event_content_model(13, new DateTime(2024, 06, 22, 7, 8, 9), 101, "Симфонический оркестр", 14, 1500, 1400));
+            //ev_con.Add(new Event_content_model(14, new DateTime(2024, 06, 23, 7, 8, 9), 102, "Пол Маккартни", 18, 900, 900));
+            //ev_con.Add(new Event_content_model(15, new DateTime(2024, 06, 24, 7, 8, 9), 103, "Акустический блюз", 14, 2000, 1500));
+            //ev_con.Add(new Event_content_model(20, new DateTime(2024, 06, 21, 7, 8, 9), 7, "Библиотеки служат людям", 7, 100, 50));
+            //ev_con.Add(new Event_content_model(21, new DateTime(2024, 06, 22, 7, 8, 9), 8, "Мистическая африка", 7, 200, 200));
+            //ev_con.Add(new Event_content_model(22, new DateTime(2024, 06, 20, 7, 8, 9), 9, "Александр сергеевич Пушкин", 10, 100, 100));
+            //ev_con.Add(new Event_content_model(23, new DateTime(2024, 06, 23, 7, 8, 9), 40, "Вижу космос", 7, 150, 100));
+            //ev_con.Add(new Event_content_model(24, new DateTime(2024, 06, 24, 7, 8, 9), 41, "Давайте просто любить жизнь!", 7, 50, 50));
+            //ev_con.Add(new Event_content_model(25, new DateTime(2024, 06, 25, 7, 8, 9), 42, "У победы наши лица", 10, 80, 80));
+            //ev_con.Add(new Event_content_model(26, new DateTime(2024, 06, 26, 7, 8, 9), 73, "Каникулы с книгой", 5, 100, 100));
+            //ev_con.Add(new Event_content_model(27, new DateTime(2024, 06, 26, 7, 8, 9), 74, "Образы России", 5, 200, 150));
+            //ev_con.Add(new Event_content_model(28, new DateTime(2024, 06, 26, 7, 8, 9), 75, "Сердце не камень", 5, 200, 150));
+            //ev_con.Add(new Event_content_model(29, new DateTime(2024, 06, 27, 7, 8, 9), 104, "Лето красное встречаем", 7, 100, 50));
+            //ev_con.Add(new Event_content_model(30, new DateTime(2024, 06, 27, 7, 8, 9), 105, "Россия - моя история", 14, 100, 100));
+            //ev_con.Add(new Event_content_model(31, new DateTime(2024, 06, 28, 7, 8, 9), 106, "История ВДВ", 14, 90, 50));
+            //ev_con.Add(new Event_content_model(32, new DateTime(2024, 06, 28, 7, 8, 9), 105, "Высшие ценности царской семьи", 14, 120, 120));
+            //ev_con.Add(new Event_content_model(33, new DateTime(2024, 06, 29, 7, 8, 9), 106, "Тайны ледяного материка", 7, 180, 180));
+            //ev_con.Add(new Event_content_model(34, new DateTime(2024, 06, 22, 7, 8, 9), 10, "Антигравитация", 5, 1700, 1650));
+            //ev_con.Add(new Event_content_model(35, new DateTime(2024, 06, 21, 7, 8, 9), 11, "Легенда", 5, 2000, 1650));
+            //ev_con.Add(new Event_content_model(36, new DateTime(2024, 06, 23, 7, 8, 9), 12, "Матрешка", 3, 2000, 2000));
+            //ev_con.Add(new Event_content_model(37, new DateTime(2024, 06, 24, 7, 8, 9), 43, "Грани Георгия Гараняна", 7, 3000, 2500));
+            //ev_con.Add(new Event_content_model(38, new DateTime(2024, 06, 25, 7, 8, 9), 44, "Шоу зверей", 7, 2500, 2500));
+            //ev_con.Add(new Event_content_model(39, new DateTime(2024, 06, 26, 7, 8, 9), 45, "Идол-2024", 10, 2000, 2000));
+            //ev_con.Add(new Event_content_model(40, new DateTime(2024, 06, 26, 7, 8, 9), 76, "Кудзинов", 14, 2500, 1650));
+            //ev_con.Add(new Event_content_model(41, new DateTime(2024, 06, 27, 7, 8, 9), 76, "Как создать вселенную", 5, 2000, 1950));
+            //ev_con.Add(new Event_content_model(42, new DateTime(2024, 06, 27, 7, 8, 9), 76, "Карнавал магии", 3, 2000, 2000));
+            //ev_con.Add(new Event_content_model(43, new DateTime(2024, 06, 28, 7, 8, 9), 107, "Артист", 3, 2500, 2400));
+            //ev_con.Add(new Event_content_model(44, new DateTime(2024, 06, 28, 7, 8, 9), 107, "Дурацкий цЫрк", 3, 2000, 2000));
+            //ev_con.Add(new Event_content_model(45, new DateTime(2024, 06, 29, 7, 8, 9), 107, "Гарри и школа волшебства", 3, 2000, 2000));
+            //ev_con.Add(new Event_content_model(46, new DateTime(2024, 06, 29, 7, 8, 9), 10, "Империя хищников", 7, 2400, 2400));
+            //ev_con.Add(new Event_content_model(47, new DateTime(2024, 06, 30, 7, 8, 9), 11, "Волшебная лампа", 3, 2200, 2200));
+            //ev_con.Add(new Event_content_model(48, new DateTime(2024, 06, 30, 7, 8, 9), 12, "Цирк-шапито", 3, 1700, 1650));
+            //ev_con.Add(new Event_content_model(49, new DateTime(2024, 06, 29, 7, 8, 9), 109, "Ледниковый период", 3, 1500, 1500));
+            //ev_con.Add(new Event_content_model(50, new DateTime(2024, 06, 20, 7, 8, 9), 13, "Турнир по боксу", 7, 1700, 1650));
+            //ev_con.Add(new Event_content_model(51, new DateTime(2024, 06, 21, 7, 8, 9), 14, "Футбольная лига", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(52, new DateTime(2024, 06, 22, 7, 8, 9), 15, "Плавание", 7, 500, 500));
+            //ev_con.Add(new Event_content_model(53, new DateTime(2024, 06, 23, 7, 8, 9), 46, "Профессиональный бокс", 10, 1300, 650));
+            //ev_con.Add(new Event_content_model(54, new DateTime(2024, 06, 24, 7, 8, 9), 47, "Шоу каскадеров", 10, 1000, 1000));
+            //ev_con.Add(new Event_content_model(55, new DateTime(2024, 06, 25, 7, 8, 9), 48, "Фехтование", 10, 900, 650));
+            //ev_con.Add(new Event_content_model(56, new DateTime(2024, 06, 26, 7, 8, 9), 77, "Борьба на поясах", 10, 800, 800));
+            //ev_con.Add(new Event_content_model(57, new DateTime(2024, 06, 26, 7, 8, 9), 78, "Легкая атлетика", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(58, new DateTime(2024, 06, 27, 7, 8, 9), 79, "Фигурное катание", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(59, new DateTime(2024, 06, 27, 7, 8, 9), 108, "Хоккей", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(60, new DateTime(2024, 06, 28, 7, 8, 9), 109, "Биатлон", 7, 700, 700));
+            //ev_con.Add(new Event_content_model(61, new DateTime(2024, 06, 28, 7, 8, 9), 110, "Формула-1", 7, 700, 700));
+            //ev_con.Add(new Event_content_model(62, new DateTime(2024, 06, 29, 7, 8, 9), 13, "Шахматы", 5, 700, 650));
+            //ev_con.Add(new Event_content_model(63, new DateTime(2024, 06, 29, 7, 8, 9), 14, "Теннис", 5, 700, 650));
+            //ev_con.Add(new Event_content_model(64, new DateTime(2024, 06, 30, 7, 8, 9), 15, "Велоспорт", 5, 700, 700));
+            //ev_con.Add(new Event_content_model(65, new DateTime(2024, 06, 30, 7, 8, 9), 46, "Летние виды спорта", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(66, new DateTime(2024, 06, 30, 7, 8, 9), 48, "Зимние виды спорта", 7, 700, 650));
+            //ev_con.Add(new Event_content_model(67, new DateTime(2024, 06, 21, 7, 8, 9), 16, "Биохакинг", 18, 70, 65));
+            //ev_con.Add(new Event_content_model(68, new DateTime(2024, 06, 22, 7, 8, 9), 17, "Курс по управлению командой", 18, 65, 65));
+            //ev_con.Add(new Event_content_model(69, new DateTime(2024, 06, 23, 7, 8, 9), 18, "Бизнес-конференция", 18, 60, 60));
+            //ev_con.Add(new Event_content_model(70, new DateTime(2024, 06, 24, 7, 8, 9), 49, "Гипноз без гипноза", 18, 50, 50));
+            //ev_con.Add(new Event_content_model(71, new DateTime(2024, 06, 25, 7, 8, 9), 50, "Нейротехнология блоков", 18, 40, 40));
+            //ev_con.Add(new Event_content_model(72, new DateTime(2024, 06, 26, 7, 8, 9), 51, "Торговля и складской учет", 18, 30, 25));
+            //ev_con.Add(new Event_content_model(73, new DateTime(2024, 06, 26, 7, 8, 9), 80, "Методист онлайн-курсов", 18, 20, 20));
+            //ev_con.Add(new Event_content_model(74, new DateTime(2024, 06, 27, 7, 8, 9), 81, "Нейросети для каждого", 18, 25, 25));
+            //ev_con.Add(new Event_content_model(75, new DateTime(2024, 06, 27, 7, 8, 9), 82, "Кредиторская задолженность", 18, 30, 30));
+            //ev_con.Add(new Event_content_model(76, new DateTime(2024, 06, 28, 7, 8, 9), 111, "Построение системы управления", 18, 40, 40));
+            //ev_con.Add(new Event_content_model(77, new DateTime(2024, 06, 28, 7, 8, 9), 112, "Школа продаж", 14, 35, 35));
+            //ev_con.Add(new Event_content_model(78, new DateTime(2024, 06, 29, 7, 8, 9), 113, "Маркетинговая воронка", 18, 20, 20));
+            //ev_con.Add(new Event_content_model(79, new DateTime(2024, 06, 29, 7, 8, 9), 16, "Система менеджмента", 18, 25, 15));
+            //ev_con.Add(new Event_content_model(80, new DateTime(2024, 06, 30, 7, 8, 9), 17, "Аренда и лизинг", 18, 30, 30));
+            //ev_con.Add(new Event_content_model(81, new DateTime(2024, 06, 30, 7, 8, 9), 18, "Искусство управлять собой", 14, 40, 40));
+            //ev_con.Add(new Event_content_model(82, new DateTime(2024, 06, 30, 7, 8, 9), 111, "Бизнес-аналитик", 18, 45, 45));
+            //ev_con.Add(new Event_content_model(83, new DateTime(2024, 06, 29, 7, 8, 9), 112, "Семинар для психологов", 18, 50, 45));
+            //ev_con.Add(new Event_content_model(84, new DateTime(2024, 06, 21, 7, 8, 9), 19, "Головоломка", 7, 200, 150));
+            //ev_con.Add(new Event_content_model(85, new DateTime(2024, 06, 22, 7, 8, 9), 20, "Унесенные прзраками", 10, 100, 50));
+            //ev_con.Add(new Event_content_model(86, new DateTime(2024, 06, 23, 7, 8, 9), 21, "Тур с Иванушками", 5, 150, 50));
+            //ev_con.Add(new Event_content_model(87, new DateTime(2024, 06, 24, 7, 8, 9), 52, "Три богатыря", 3, 100, 50));
+            //ev_con.Add(new Event_content_model(88, new DateTime(2024, 06, 25, 7, 8, 9), 53, "10 жизней", 7, 250, 150));
+            //ev_con.Add(new Event_content_model(89, new DateTime(2024, 06, 26, 7, 8, 9), 54, "Манюня", 5, 200, 50));
+            //ev_con.Add(new Event_content_model(90, new DateTime(2024, 06, 27, 7, 8, 9), 83, "Непослушники", 14, 200, 150));
+            //ev_con.Add(new Event_content_model(91, new DateTime(2024, 06, 28, 7, 8, 9), 84, "Семейный переполох", 18, 250, 250));
+            //ev_con.Add(new Event_content_model(92, new DateTime(2024, 06, 29, 7, 8, 9), 85, "Майор Гром", 18, 150, 150));
+            //ev_con.Add(new Event_content_model(93, new DateTime(2024, 06, 30, 7, 8, 9), 114, "Бар МоскваЧики", 18, 100, 100));
+            //ev_con.Add(new Event_content_model(94, new DateTime(2024, 06, 29, 7, 8, 9), 115, "Заклятье", 18, 150, 150));
+            //ev_con.Add(new Event_content_model(95, new DateTime(2024, 06, 28, 7, 8, 9), 116, "Фуриоса", 14, 200, 150));
+            //ev_con.Add(new Event_content_model(96, new DateTime(2024, 06, 28, 7, 8, 9), 116, "Мой любимый чемпион", 10, 200, 150));
+            //ev_con.Add(new Event_content_model(97, new DateTime(2024, 06, 29, 7, 8, 9), 115, "Бывший в помощь", 18, 100, 100));
+            //ev_con.Add(new Event_content_model(98, new DateTime(2024, 06, 30, 7, 8, 9), 114, "Горизонты", 10, 200, 200));
+            //ev_con.Add(new Event_content_model(99, new DateTime(2024, 06, 27, 7, 8, 9), 19, "Только течет река", 10, 200, 200));
+            //ev_con.Add(new Event_content_model(100, new DateTime(2024, 06, 28, 7, 8, 9), 20, "Клуб Зеро", 10, 100, 50));
+            //ev_con.Add(new Event_content_model(101, new DateTime(2024, 06, 21, 7, 8, 9), 22, "Импровизация", 18, 300, 250));
+            //ev_con.Add(new Event_content_model(102, new DateTime(2024, 06, 22, 7, 8, 9), 23, "Уральские пельмени", 104, 400, 350));
+            //ev_con.Add(new Event_content_model(103, new DateTime(2024, 06, 23, 7, 8, 9), 24, "Вечерний Ургант", 18, 200, 200));
+            //ev_con.Add(new Event_content_model(104, new DateTime(2024, 06, 24, 7, 8, 9), 55, "Однажды в России", 18, 100, 100));
+            //ev_con.Add(new Event_content_model(105, new DateTime(2024, 06, 25, 7, 8, 9), 56, "Прожекторперисхилтон", 18, 200, 200));
+            //ev_con.Add(new Event_content_model(106, new DateTime(2024, 06, 26, 7, 8, 9), 57, "КВН", 14, 300, 300));
+            //ev_con.Add(new Event_content_model(107, new DateTime(2024, 06, 27, 7, 8, 9), 86, "Камеди клаб", 18, 400, 400));
+            //ev_con.Add(new Event_content_model(108, new DateTime(2024, 06, 28, 7, 8, 9), 87, "Камеди вумен", 18, 150, 150));
+            //ev_con.Add(new Event_content_model(109, new DateTime(2024, 06, 29, 7, 8, 9), 88, "Городок", 14, 250, 150));
+            //ev_con.Add(new Event_content_model(110, new DateTime(2024, 06, 30, 7, 8, 9), 117, "Гле логика?", 14, 350, 250));
+            //ev_con.Add(new Event_content_model(111, new DateTime(2024, 06, 30, 7, 8, 9), 118, "ХБ", 18, 100, 50));
+            //ev_con.Add(new Event_content_model(112, new DateTime(2024, 06, 29, 7, 8, 9), 119, "Большой вопрос", 14, 150, 50));
+            //ev_con.Add(new Event_content_model(113, new DateTime(2024, 06, 28, 7, 8, 9), 22, "Камеди Батл", 18, 200, 150));
+            //ev_con.Add(new Event_content_model(114, new DateTime(2024, 06, 25, 7, 8, 9), 23, "Большая разница", 18, 250, 150));
+            //ev_con.Add(new Event_content_model(115, new DateTime(2024, 06, 27, 7, 8, 9), 24, "Убойной ночи", 18, 300, 250));
+            //ev_con.Add(new Event_content_model(116, new DateTime(2024, 06, 28, 7, 8, 9), 55, "Смеяться разрешается", 14, 240, 150));
+            //ev_con.Add(new Event_content_model(117, new DateTime(2024, 06, 28, 7, 8, 9), 56, "Кривое зеркало", 18, 140, 140));
+            //ev_con.Add(new Event_content_model(118, new DateTime(2024, 06, 29, 7, 8, 9), 57, "Открытый микрофон", 18, 90, 90));
+            //ev_con.Add(new Event_content_model(119, new DateTime(2024, 06, 30, 7, 8, 9), 86, "Смехопанарама", 14, 100, 100));
+            //ev_con.Add(new Event_content_model(120, new DateTime(2024, 06, 30, 7, 8, 9), 87, "Петросян-шоу", 14, 100, 100));
+            //ev_con.Add(new Event_content_model(121, new DateTime(2024, 06, 21, 7, 8, 9), 25, "Танцплощадка", 18, 1700, 1650));
+            //ev_con.Add(new Event_content_model(122, new DateTime(2024, 06, 22, 7, 8, 9), 26, "Дискотека 90-х", 18, 900, 850));
+            //ev_con.Add(new Event_content_model(123, new DateTime(2024, 06, 23, 7, 8, 9), 27, "День рождения андрея Резника", 14, 500, 500));
+            //ev_con.Add(new Event_content_model(124, new DateTime(2024, 06, 24, 7, 8, 9), 58, "Вечеринка Ретро", 14, 600, 600));
+            //ev_con.Add(new Event_content_model(125, new DateTime(2024, 06, 25, 7, 8, 9), 59, "Дыхание ночи", 18, 700, 650));
+            //ev_con.Add(new Event_content_model(126, new DateTime(2024, 06, 26, 7, 8, 9), 89, "Выпускной", 18, 800, 650));
+            //ev_con.Add(new Event_content_model(127, new DateTime(2024, 06, 27, 7, 8, 9), 90, "Для своих", 18, 900, 650));
+            //ev_con.Add(new Event_content_model(128, new DateTime(2024, 06, 27, 7, 8, 9), 120, "Вечер Ивана купала", 18, 1200, 950));
+            //ev_con.Add(new Event_content_model(129, new DateTime(2024, 06, 28, 7, 8, 9), 121, "Баварские радости", 18, 1100, 1100));
+            //ev_con.Add(new Event_content_model(130, new DateTime(2024, 06, 22, 7, 8, 9), 28, "Король Лев", 3, 70, 65));
+            //ev_con.Add(new Event_content_model(131, new DateTime(2024, 06, 23, 7, 8, 9), 29, "Винни Пух", 3, 60, 60));
+            //ev_con.Add(new Event_content_model(132, new DateTime(2024, 06, 24, 7, 8, 9), 30, "Волшебник Изумрудного города", 5, 50, 50));
+            //ev_con.Add(new Event_content_model(133, new DateTime(2024, 06, 25, 7, 8, 9), 61, "Золушка", 7, 80, 65));
+            //ev_con.Add(new Event_content_model(134, new DateTime(2024, 06, 26, 7, 8, 9), 61, "Парк чудес", 7, 90, 65));
+            //ev_con.Add(new Event_content_model(135, new DateTime(2024, 06, 27, 7, 8, 9), 62, "Счастливый принц", 5, 100, 100));
+            //ev_con.Add(new Event_content_model(136, new DateTime(2024, 06, 28, 7, 8, 9), 63, "Красная шапочка", 3, 100, 100));
+            //ev_con.Add(new Event_content_model(137, new DateTime(2024, 06, 28, 7, 8, 9), 92, "Кто сказал Мяу?", 3, 90, 90));
+            //ev_con.Add(new Event_content_model(138, new DateTime(2024, 06, 29, 7, 8, 9), 92, "Тридевятое царство", 5, 80, 80));
+            //ev_con.Add(new Event_content_model(139, new DateTime(2024, 06, 29, 7, 8, 9), 93, "Апельсиновые сказки", 3, 70, 65));
+            //ev_con.Add(new Event_content_model(140, new DateTime(2024, 06, 30, 7, 8, 9), 93, "Музейные занятия для детей", 5, 60, 60));
+            //ev_con.Add(new Event_content_model(141, new DateTime(2024, 06, 30, 7, 8, 9), 94, "Динопарк", 3, 50, 50));
+            //ev_con.Add(new Event_content_model(142, new DateTime(2024, 06, 29, 7, 8, 9), 123, "Муравей по имени Бигги", 5, 50, 50));
+            //ev_con.Add(new Event_content_model(143, new DateTime(2024, 06, 29, 7, 8, 9), 124, "Мышонок Криспи", 5, 70, 65));
+            //ev_con.Add(new Event_content_model(144, new DateTime(2024, 06, 30, 7, 8, 9), 125, "Сказка в Лукоморье", 7, 60, 60));
+            //ev_con.Add(new Event_content_model(145, new DateTime(2024, 06, 28, 7, 8, 9), 125, "Лев и мышка-никудышка", 7, 70, 65));
+            //ev_con.Add(new Event_content_model(146, new DateTime(2024, 06, 24, 7, 8, 9), 31, "Ни дать, ни зять", 18, 700, 650));
+            //ev_con.Add(new Event_content_model(147, new DateTime(2024, 06, 25, 7, 8, 9), 32, "Научи меня жить", 14, 700, 650));
+            //ev_con.Add(new Event_content_model(148, new DateTime(2024, 06, 26, 7, 8, 9), 33, "Скрипач на крыше", 10, 500, 500));
+            //ev_con.Add(new Event_content_model(149, new DateTime(2024, 06, 27, 7, 8, 9), 64, "Не в свои сани не садись", 10, 400, 400));
+            //ev_con.Add(new Event_content_model(150, new DateTime(2024, 06, 28, 7, 8, 9), 65, "Одолжите тенора", 18, 350, 250));
+            //ev_con.Add(new Event_content_model(151, new DateTime(2024, 06, 29, 7, 8, 9), 95, "Декабристы", 18, 700, 650));
+            //ev_con.Add(new Event_content_model(152, new DateTime(2024, 06, 29, 7, 8, 9), 96, "Девушка на миллион", 18, 800, 800));
+            //ev_con.Add(new Event_content_model(153, new DateTime(2024, 06, 30, 7, 8, 9), 126, "Жизель", 18, 500, 450));
+            //ev_con.Add(new Event_content_model(154, new DateTime(2024, 06, 30, 7, 8, 9), 127, "Иммерсивный театр", 18, 500, 500));
+
+            //foreach (var item in ev_con)
+            //    Date_Layer_model.Event_content.Insert(item);
+
+            ////8
+            //List<Buy_tickets_model> buy = new List<Buy_tickets_model>();
+
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 22), 243, 3));
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 22), 4, 4));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 22), 5, 5));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 22), 6, 6));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 22), 7, 7));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 22), 8, 8));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 22), 9, 9));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 22), 10, 10));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 22), 11, 11));
+            //buy.Add(new Buy_tickets_model(6000, new DateTime(2024, 06, 22), 12, 12));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 21), 13, 13));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 21), 14, 14));
+            //buy.Add(new Buy_tickets_model(5500, new DateTime(2024, 06, 21), 15, 15));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 21), 16, 16));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 21), 17, 17));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 21), 18, 18));
+            //buy.Add(new Buy_tickets_model(1000, new DateTime(2024, 06, 21), 19, 19));
+            //buy.Add(new Buy_tickets_model(1500, new DateTime(2024, 06, 21), 20, 20));
+            //buy.Add(new Buy_tickets_model(1700, new DateTime(2024, 06, 21), 21, 21));
+            //buy.Add(new Buy_tickets_model(1800, new DateTime(2024, 06, 21), 22, 22));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 21), 23, 23));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 21), 24, 24));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 20), 25, 25));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 20), 26, 26));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 20), 27, 27));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 20), 28, 28));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 20), 29, 29));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 20), 30, 30));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 20), 31, 31));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 20), 32, 32));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 20), 33, 33));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 20), 34, 34));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 20), 35, 35));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 20), 36, 36));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 20), 37, 37));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 20), 38, 38));
+            //buy.Add(new Buy_tickets_model(3700, new DateTime(2024, 06, 20), 39, 39));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 20), 40, 40));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 20), 41, 41));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 20), 42, 42));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 20), 43, 43));
+            //buy.Add(new Buy_tickets_model(1700, new DateTime(2024, 06, 20), 44, 44));
+            //buy.Add(new Buy_tickets_model(1800, new DateTime(2024, 06, 19), 45, 45));
+            //buy.Add(new Buy_tickets_model(1900, new DateTime(2024, 06, 19), 46, 46));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 19), 47, 47));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 19), 48, 48));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 19), 49, 49));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 19), 50, 50));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 19), 51, 51));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 18), 52, 52));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 18), 53, 53));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 18), 54, 54));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 18), 55, 55));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 18), 56, 56));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 18), 57, 57));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 18), 58, 58));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 18), 59, 59));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 18), 60, 60));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 18), 61, 61));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 18), 62, 62));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 18), 63, 63));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 17), 64, 64));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 17), 65, 65));
+            //buy.Add(new Buy_tickets_model(3700, new DateTime(2024, 06, 17), 66, 66));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 17), 67, 67));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 17), 68, 68));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 17), 69, 69));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 17), 70, 70));
+            //buy.Add(new Buy_tickets_model(4100, new DateTime(2024, 06, 17), 71, 71));
+            //buy.Add(new Buy_tickets_model(4200, new DateTime(2024, 06, 17), 72, 72));
+            //buy.Add(new Buy_tickets_model(4300, new DateTime(2024, 06, 17), 73, 73));
+            //buy.Add(new Buy_tickets_model(4400, new DateTime(2024, 06, 17), 74, 74));
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 16), 75, 75));
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 16), 76, 76));
+            //buy.Add(new Buy_tickets_model(4600, new DateTime(2024, 06, 16), 77, 77));
+            //buy.Add(new Buy_tickets_model(4700, new DateTime(2024, 06, 16), 78, 78));
+            //buy.Add(new Buy_tickets_model(4800, new DateTime(2024, 06, 16), 79, 79));
+            //buy.Add(new Buy_tickets_model(4900, new DateTime(2024, 06, 16), 80, 80));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 16), 81, 81));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 16), 82, 82));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 16), 83, 83));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 16), 84, 84));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 16), 85, 85));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 16), 86, 86));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 16), 87, 87));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 16), 88, 88));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 16), 89, 89));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 16), 90, 90));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 16), 91, 91));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 16), 92, 92));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 15), 93, 93));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 15), 94, 94));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 15), 95, 95));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 15), 96, 96));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 15), 97, 97));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 15), 98, 98));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 15), 99, 99));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 15), 100, 100));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 15), 101, 101));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 15), 102, 102));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 22), 103, 103));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 22), 104, 104));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 22), 105, 105));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 22), 106, 106));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 22), 107, 107));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 22), 108, 108));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 22), 109, 109));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 22), 110, 110));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 22), 111, 111));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 22), 112, 112));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 22), 113, 113));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 22), 114, 114));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 16), 115, 115));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 16), 116, 116));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 16), 117, 117));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 16), 118, 118));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 16), 119, 119));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 16), 120, 120));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 16), 121, 121));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 16), 122, 122));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 16), 123, 123));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 16), 124, 124));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 16), 125, 125));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 16), 126, 126));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 16), 127, 127));
+            //buy.Add(new Buy_tickets_model(3700, new DateTime(2024, 06, 16), 128, 128));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 16), 129, 129));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 16), 130, 130));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 16), 131, 131));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 16), 132, 132));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 16), 133, 133));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 16), 134, 134));
+            //buy.Add(new Buy_tickets_model(3700, new DateTime(2024, 06, 16), 135, 135));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 16), 136, 136));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 16), 137, 137));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 16), 138, 138));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 22), 139, 139));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 22), 140, 140));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 22), 141, 141));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 22), 142, 142));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 22), 143, 143));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 22), 144, 144));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 22), 145, 145));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 22), 146, 146));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 22), 147, 147));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 19), 148, 148));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 19), 149, 149));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 19), 150, 150));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 19), 151, 151));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 19), 152, 152));
+            //buy.Add(new Buy_tickets_model(1900, new DateTime(2024, 06, 19), 153, 153));
+            //buy.Add(new Buy_tickets_model(1800, new DateTime(2024, 06, 19), 154, 154));
+            //buy.Add(new Buy_tickets_model(1700, new DateTime(2024, 06, 19), 155, 1));
+            //buy.Add(new Buy_tickets_model(1600, new DateTime(2024, 06, 19), 156, 2));
+            //buy.Add(new Buy_tickets_model(1600, new DateTime(2024, 06, 19), 157, 3));
+            //buy.Add(new Buy_tickets_model(1500, new DateTime(2024, 06, 19), 158, 4));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 19), 159, 5));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 19), 160, 6));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 19), 161, 7));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 19), 162, 8));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 19), 163, 9));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 19), 164, 10));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 19), 165, 11));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 19), 166, 12));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 19), 167, 13));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 19), 168, 14));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 19), 169, 15));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 22), 170, 16));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 22), 171, 17));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 22), 172, 18));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 22), 173, 19));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 22), 174, 20));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 22), 175, 21));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 22), 176, 22));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 22), 177, 23));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 22), 178, 24));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 22), 179, 25));
+            //buy.Add(new Buy_tickets_model(4100, new DateTime(2024, 06, 22), 180, 26));
+            //buy.Add(new Buy_tickets_model(4200, new DateTime(2024, 06, 22), 181, 27));
+            //buy.Add(new Buy_tickets_model(4300, new DateTime(2024, 06, 22), 182, 28));
+            //buy.Add(new Buy_tickets_model(4400, new DateTime(2024, 06, 22), 183, 29));
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 22), 184, 30));
+            //buy.Add(new Buy_tickets_model(4600, new DateTime(2024, 06, 22), 185, 31));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 22), 186, 32));
+            //buy.Add(new Buy_tickets_model(4700, new DateTime(2024, 06, 22), 187, 33));
+            //buy.Add(new Buy_tickets_model(4800, new DateTime(2024, 06, 22), 188, 34));
+            //buy.Add(new Buy_tickets_model(4900, new DateTime(2024, 06, 22), 189, 35));
+            //buy.Add(new Buy_tickets_model(4900, new DateTime(2024, 06, 22), 190, 36));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 22), 191, 37));
+            //buy.Add(new Buy_tickets_model(5100, new DateTime(2024, 06, 22), 192, 38));
+            //buy.Add(new Buy_tickets_model(5200, new DateTime(2024, 06, 22), 193, 39));
+            //buy.Add(new Buy_tickets_model(5300, new DateTime(2024, 06, 22), 194, 40));
+            //buy.Add(new Buy_tickets_model(5400, new DateTime(2024, 06, 22), 195, 41));
+            //buy.Add(new Buy_tickets_model(5500, new DateTime(2024, 06, 22), 196, 42));
+            //buy.Add(new Buy_tickets_model(5600, new DateTime(2024, 06, 22), 197, 43));
+            //buy.Add(new Buy_tickets_model(5700, new DateTime(2024, 06, 22), 198, 44));
+            //buy.Add(new Buy_tickets_model(5800, new DateTime(2024, 06, 22), 199, 45));
+            //buy.Add(new Buy_tickets_model(5900, new DateTime(2024, 06, 19), 200, 46));
+            //buy.Add(new Buy_tickets_model(5100, new DateTime(2024, 06, 21), 201, 47));
+            //buy.Add(new Buy_tickets_model(5000, new DateTime(2024, 06, 20), 202, 47));
+            //buy.Add(new Buy_tickets_model(4700, new DateTime(2024, 06, 21), 203, 48));
+            //buy.Add(new Buy_tickets_model(4600, new DateTime(2024, 06, 20), 204, 49));
+            //buy.Add(new Buy_tickets_model(4500, new DateTime(2024, 06, 15), 205, 50));
+            //buy.Add(new Buy_tickets_model(4400, new DateTime(2024, 06, 15), 206, 51));
+            //buy.Add(new Buy_tickets_model(4300, new DateTime(2024, 06, 14), 207, 52));
+            //buy.Add(new Buy_tickets_model(4200, new DateTime(2024, 06, 22), 208, 53));
+            //buy.Add(new Buy_tickets_model(4100, new DateTime(2024, 06, 22), 209, 54));
+            //buy.Add(new Buy_tickets_model(4000, new DateTime(2024, 06, 22), 210, 55));
+            //buy.Add(new Buy_tickets_model(3900, new DateTime(2024, 06, 22), 211, 56));
+            //buy.Add(new Buy_tickets_model(3800, new DateTime(2024, 06, 22), 212, 57));
+            //buy.Add(new Buy_tickets_model(3700, new DateTime(2024, 06, 22), 213, 58));
+            //buy.Add(new Buy_tickets_model(3600, new DateTime(2024, 06, 22), 214, 59));
+            //buy.Add(new Buy_tickets_model(3500, new DateTime(2024, 06, 14), 215, 60));
+            //buy.Add(new Buy_tickets_model(3400, new DateTime(2024, 06, 14), 216, 61));
+            //buy.Add(new Buy_tickets_model(3300, new DateTime(2024, 06, 15), 217, 62));
+            //buy.Add(new Buy_tickets_model(3200, new DateTime(2024, 06, 15), 218, 63));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 15), 219, 64));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 15), 220, 65));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 15), 221, 66));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 15), 222, 67));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 15), 223, 68));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 15), 224, 69));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 20), 225, 70));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 20), 226, 71));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 20), 227, 72));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 20), 228, 73));
+            //buy.Add(new Buy_tickets_model(5300, new DateTime(2024, 06, 20), 229, 74));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 20), 230, 75));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 20), 231, 76));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 20), 232, 77));
+            //buy.Add(new Buy_tickets_model(2000, new DateTime(2024, 06, 20), 233, 78));
+            //buy.Add(new Buy_tickets_model(2100, new DateTime(2024, 06, 22), 234, 79));
+            //buy.Add(new Buy_tickets_model(2200, new DateTime(2024, 06, 22), 235, 80));
+            //buy.Add(new Buy_tickets_model(2300, new DateTime(2024, 06, 22), 236, 81));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 22), 237, 82));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 22), 238, 83));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 22), 239, 84));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 22), 240, 85));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 20), 240, 86));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 20), 239, 87));
+            //buy.Add(new Buy_tickets_model(3000, new DateTime(2024, 06, 20), 239, 88));
+            //buy.Add(new Buy_tickets_model(3100, new DateTime(2024, 06, 20), 238, 89));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 21), 238, 90));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 21), 238, 91));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 21), 237, 92));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 21), 237, 93));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 21), 237, 94));
+            //buy.Add(new Buy_tickets_model(2500, new DateTime(2024, 06, 21), 237, 95));
+            //buy.Add(new Buy_tickets_model(2400, new DateTime(2024, 06, 21), 236, 96));
+            //buy.Add(new Buy_tickets_model(2600, new DateTime(2024, 06, 21), 236, 97));
+            //buy.Add(new Buy_tickets_model(2700, new DateTime(2024, 06, 21), 236, 98));
+            //buy.Add(new Buy_tickets_model(2800, new DateTime(2024, 06, 21), 236, 99));
+            //buy.Add(new Buy_tickets_model(2900, new DateTime(2024, 06, 21), 236, 100));
+
+            //foreach (var item in buy)
+            //    Date_Layer_model.Buy_tickets.Insert(item);
         }
     }
 }

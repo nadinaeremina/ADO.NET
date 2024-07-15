@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
+using System.Configuration; // подключаем
 using System.Data.SqlClient;
 
 namespace Form_Academy
 {
     public partial class Form1 : Form
     {
-        SqlConnection conn = null;
+        SqlConnection conn = null; // обьявили обьект
         SqlDataAdapter da = null;
         DataSet ds = null;
         SqlCommandBuilder cmd = null;
@@ -23,10 +23,9 @@ namespace Form_Academy
         {
             InitializeComponent();
 
-            conn = new SqlConnection();
-            cs = ConfigurationManager.ConnectionStrings["Academy_add"].ConnectionString;
+            conn = new SqlConnection(); // проинициализировали обьект
+            cs = ConfigurationManager.ConnectionStrings["Academy_add"].ConnectionString; // подключаем его к нашей БД
             conn.ConnectionString = cs;
-
         }
 
         private void button_fill_Click(object sender, EventArgs e)
@@ -34,11 +33,18 @@ namespace Form_Academy
             try
             {
                 SqlConnection conn = new SqlConnection(cs);
+
                 ds = new DataSet();
                 string str_sel = textBox1.Text;
                 da = new SqlDataAdapter(str_sel, conn);
-                dataGridView1.DataSource = null;
-                cmd = new SqlCommandBuilder(da);
+
+                // в 'DataGridView' есть есть строки и столбцы, данные - это 'DataSource'
+                dataGridView1.DataSource = null; // старую строку обнуляем
+
+                // 'SqlCommandBuilder' создает поля так, как они называются в талице, читает каждую строчку таблицы,
+                // заполняет каждую строчку таблицы в соответствии с полями
+                cmd = new SqlCommandBuilder(da); 
+
                 da.Fill(ds, "table_1");
                 dataGridView1.DataSource = ds.Tables["table_1"];
             }
@@ -55,6 +61,7 @@ namespace Form_Academy
         private void button_update_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(cs);
+            da.Update(ds, "table_1");
         }
     }
 }
