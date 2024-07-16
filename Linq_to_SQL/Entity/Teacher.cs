@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Linq_to_SQL.Entity
 {
-    class Teacher
+    [Table (Name = "Teachers")]
+    public class Teacher
     {
-        [Table (XName="Teachers")]
+        //все св-ва 'public' // 'Column' - колонка // 'IsPrimaryKey' - ключ 
+        // 'IsDbGenerated = true' - если identity // 'Column' - для всех полей
+        // если просто 'Column' - то наше поле 'not null' // если может быть - 'CanBeNull = true'
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
         [Column]
@@ -25,9 +26,12 @@ namespace Linq_to_SQL.Entity
         [Column]
         public decimal Salary { get; set; }
         [Column(CanBeNull = true)]
-        public bool IsAssistent { get; set; }
+        public bool IsAssistant { get; set; }
         [Column(CanBeNull = true)]
         public bool IsProfessor { get; set; }
+        [Column]
+        public int PositionId { get; set; }
+        // для показа на консоли
         public override string ToString()
         {
             return $" {Id,5}  {Surname,15}  {Salary,10} ";

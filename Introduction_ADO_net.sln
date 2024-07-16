@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_to_SQL", "Linq_to_SQL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictures_for_events", "Pictures_for_events\Pictures_for_events.csproj", "{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_to_Object", "Linq_to_Object\Linq_to_Object.csproj", "{49B3BA24-D622-4F5D-8EB1-5B816D2974C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_to_XML", "Linq_to_XML\Linq_to_XML.csproj", "{D5ABB11F-E7EF-4EB5-AFA7-11FF2EA7B66E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C75AADD-E2CF-4E4E-BE50-98A7B35424B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B3BA24-D622-4F5D-8EB1-5B816D2974C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B3BA24-D622-4F5D-8EB1-5B816D2974C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B3BA24-D622-4F5D-8EB1-5B816D2974C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B3BA24-D622-4F5D-8EB1-5B816D2974C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5ABB11F-E7EF-4EB5-AFA7-11FF2EA7B66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5ABB11F-E7EF-4EB5-AFA7-11FF2EA7B66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5ABB11F-E7EF-4EB5-AFA7-11FF2EA7B66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5ABB11F-E7EF-4EB5-AFA7-11FF2EA7B66E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

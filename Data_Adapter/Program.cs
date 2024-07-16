@@ -84,69 +84,69 @@ namespace Data_Adapter
                 //    Console.WriteLine($"{dr[0],5} {dr[1],38}");
 
                 ////2 insert
-                //SqlDataAdapter subject_adapter = new SqlDataAdapter("select * from dbo.Subjects order by 1", conn);
+                SqlDataAdapter subject_adapter = new SqlDataAdapter("select * from dbo.Subjects order by 1", conn);
 
-                //SqlCommandBuilder cmd_subject = new SqlCommandBuilder(subject_adapter);
-                //DataSet ds_s = new DataSet();
-                //subject_adapter.Fill(ds_s, "Subjects");
-                //DataTable dt_subject = ds_s.Tables["Subjects"];
+                SqlCommandBuilder cmd_subject = new SqlCommandBuilder(subject_adapter);
+                DataSet ds_s = new DataSet();
+                subject_adapter.Fill(ds_s, "Subjects");
+                DataTable dt_subject = ds_s.Tables["Subjects"];
 
-                //// создаем Row, чтобы добавить в коллекцию
-                //DataRow new_subj = dt_subject.NewRow();
-                //new_subj["Name_"] = "Sublect_30";
-                
-                //// добавляем строку в таблицу
-                //dt_subject.Rows.Add(new_subj);
+                // создаем Row, чтобы добавить в коллекцию
+                DataRow new_subj = dt_subject.NewRow();
+                new_subj["Name_"] = "Sublect_35";
 
-                //// обновляем таблицу, которая наход-ся в нашем буферном классе
-                //subject_adapter.Update(ds_s, "Subjects");
+                // добавляем строку в таблицу
+                dt_subject.Rows.Add(new_subj);
 
-                //// очистили память // наш DataSet
-                //dt_subject.Clear(); 
+                // обновляем таблицу, которая наход-ся в нашем буферном классе
+                subject_adapter.Update(ds_s, "Subjects");
 
-                //// заполняем нашу буферную таблицу
-                //subject_adapter.Fill(ds_s, "Subjects");
+                // очистили память // наш DataSet
+                dt_subject.Clear();
 
-                //// читаем заново
-                //foreach (DataRow dr in dt_subject.Rows)
-                //    Console.WriteLine($"{dr[0],5} {dr[1],38}");
+                // заполняем нашу буферную таблицу
+                subject_adapter.Fill(ds_s, "Subjects");
 
-                ////3 delete // без хранимой процедуры, по запросу нашей колонки
-                //SqlDataAdapter subject_adapter = new SqlDataAdapter("select * from dbo.Subjects order by 1", conn);
+                // читаем заново
+                foreach (DataRow dr in dt_subject.Rows)
+                    //    Console.WriteLine($"{dr[0],5} {dr[1],38}");
 
-                //SqlCommandBuilder cmd_subject = new SqlCommandBuilder(subject_adapter);
-                //DataSet ds_s = new DataSet();
-                //subject_adapter.Fill(ds_s, "Subjects");
-                //DataTable dt_subject = ds_s.Tables["Subjects"];
+                    ////3 delete // без хранимой процедуры, по запросу нашей колонки
+                    //SqlDataAdapter subject_adapter = new SqlDataAdapter("select * from dbo.Subjects order by 1", conn);
 
-                //// находим колонку, чтобы создать в ней ключ // нам нужна колонка с ключ 'id'
-                //dt_subject.PrimaryKey = new DataColumn[] { dt_subject.Columns["Id"] };
+                    //SqlCommandBuilder cmd_subject = new SqlCommandBuilder(subject_adapter);
+                    //DataSet ds_s = new DataSet();
+                    //subject_adapter.Fill(ds_s, "Subjects");
+                    //DataTable dt_subject = ds_s.Tables["Subjects"];
 
-                //// создаем строку, которая будет нам из 'DataTable' искать ('Find') по индексу
-                //DataRow row_subj_id = dt_subject.Rows.Find(9);
+                    //// находим колонку, чтобы создать в ней ключ // нам нужна колонка с ключ 'id'
+                    //dt_subject.PrimaryKey = new DataColumn[] { dt_subject.Columns["Id"] };
 
-                //if (row_subj_id != null)
-                //{
-                //    row_subj_id.Delete();
-                //    Console.WriteLine("Delete Ok!");
-                //}
-                //else
-                //    Console.WriteLine("Delete Error!");
+                    //// создаем строку, которая будет нам из 'DataTable' искать ('Find') по индексу
+                    //DataRow row_subj_id = dt_subject.Rows.Find(9);
 
-                //// обновляем адаптер
-                //subject_adapter.Update(ds_s, "Subjects");
+                    //if (row_subj_id != null)
+                    //{
+                    //    row_subj_id.Delete();
+                    //    Console.WriteLine("Delete Ok!");
+                    //}
+                    //else
+                    //    Console.WriteLine("Delete Error!");
 
-                //// очистили
-                //dt_subject.Clear();
+                    //// обновляем адаптер
+                    //subject_adapter.Update(ds_s, "Subjects");
 
-                //// считали данные обратно из таблички
-                //subject_adapter.Fill(ds_s, "Subjects");
+                    //// очистили
+                    //dt_subject.Clear();
 
-                //// показываем записи, которые остались
-                //foreach (DataRow dr in dt_subject.Rows)
-                //    Console.WriteLine($" {dr[0],-5} {dr[1],-60}");
+                    //// считали данные обратно из таблички
+                    //subject_adapter.Fill(ds_s, "Subjects");
 
-                conn.Close();
+                    //// показываем записи, которые остались
+                    //foreach (DataRow dr in dt_subject.Rows)
+                    //    Console.WriteLine($" {dr[0],-5} {dr[1],-60}");
+
+                    conn.Close();
             }
         }
     }

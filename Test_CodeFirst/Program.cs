@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using Exam.Models;
 using Exam.Data_Layer_folder;
+using System.Data.SqlClient;
 
 namespace Exam
 {
