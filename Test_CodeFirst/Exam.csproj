@@ -74,7 +74,9 @@
     <Compile Include="Models\Event_category_model.cs" />
     <Compile Include="Models\Event_content_model.cs" />
     <Compile Include="Models\Event_name_model.cs" />
+    <Compile Include="Models\Picture_model.cs" />
     <Compile Include="Models\Place_model.cs" />
+    <Compile Include="Picture.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,7 +15,7 @@ namespace Exam
         public int Id { get; set; }
         public Event_name event_name { get; set; }
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime Date_ { get; set; }
         public Place place { get; set; }
         public Event_content event_content { get; set; }
     }

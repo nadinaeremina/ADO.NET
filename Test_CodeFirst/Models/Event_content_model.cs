@@ -10,40 +10,28 @@ namespace Exam.Models
     {
         public int Id { get; set; }
         public int event_name_id { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date_ { get; set; }
         public int place_id { get; set; }
-        public string Description { get; set; }
+        public string Description_ { get; set; }
         public int Min_age { get; set; }
-        public byte[] Image { get; set; }
+        public byte[] Image_ { get; set; }
         public int Max_tickets { get; set; }
         public int Sold_tickets { get; set; }
         public Event_content_model(/*int _id,*/ int _event_name, DateTime _date, int _place, string _description, int _min_age, int _max_ticket, int _sold_tickets)
         {
             //Id = _id;
             event_name_id = _event_name;
-            Date = _date;
+            Date_ = _date;
             place_id = _place;
-            Description = _description;
+            Description_ = _description;
             Min_age = _min_age;
             Max_tickets = _max_ticket;
             Sold_tickets = _sold_tickets;
         }
-        //public Event_content_model(int _id, Event_name_model _event_name, DateTime _date, Place_model _place, DateTime _time, string _description, int _min_age, int _max_ticket, int _sold_tickets, byte[] _image)
-        //{
-        //    Id = _id;
-        //    event_name_id = _event_name;
-        //    Date = _date;
-        //    place_id = _place;
-        //    Time = _time;
-        //    Description = _description;
-        //    Min_age = _min_age;
-        //    Max_tickets = _max_ticket;
-        //    Sold_tickets = _sold_tickets;
-        //    Image = _image;
-        //}
+
         public override string ToString()
         {
-            return $"{Id,5}  {Date,15} {Description, 30} {Min_age, 5} {Max_tickets, 5} {Sold_tickets, 5}";
+            return $"{Id,5}  {Date_,15} {Description_, 30} {Min_age, 5} {Max_tickets, 5} {Sold_tickets, 5}";
         }
     }
 }

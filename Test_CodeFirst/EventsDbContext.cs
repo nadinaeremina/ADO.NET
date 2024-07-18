@@ -21,5 +21,6 @@ namespace Exam
         public DbSet<Event_category> event_categories { get; set; }
         public DbSet<Event_content> event_Contents { get; set; }
         public DbSet<Event_name> event_Names { get; set; }
+        public DbSet<Picture> images { get; set; }
     }
 }

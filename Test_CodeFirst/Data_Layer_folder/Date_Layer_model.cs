@@ -152,37 +152,35 @@ namespace Exam.Data_Layer_folder
                     SqlCommandBuilder.DeriveParameters(cmd);
 
                     cmd.Parameters[0].Value = DBNull.Value;
-                    cmd.Parameters[1].Value = ev_content.Date;// вставить только дату
-                    cmd.Parameters[2].Value = ev_content.Date.ToString("HH:mm");// вставить только время
-                    cmd.Parameters[3].Value = ev_content.Description;
-                    cmd.Parameters[4].Value = ev_content.Min_age;
-                    cmd.Parameters[5].Value = ev_content.Max_tickets;
-                    cmd.Parameters[6].Value = ev_content.Sold_tickets;
-                    cmd.Parameters[7].Value = ev_content.event_name_id;
-                    cmd.Parameters[8].Value = ev_content.place_id;
+                    cmd.Parameters[1].Value = ev_content.Date_;
+                    cmd.Parameters[2].Value = ev_content.Description_;
+                    cmd.Parameters[3].Value = ev_content.Min_age;
+                    cmd.Parameters[4].Value = ev_content.Max_tickets;
+                    cmd.Parameters[5].Value = ev_content.Sold_tickets;
+                    cmd.Parameters[6].Value = ev_content.event_name_id;
+                    cmd.Parameters[7].Value = ev_content.place_id;
                     
-
                     cmd.ExecuteNonQuery();
                 }
             }
 
-            public static void Add_picture(byte[] pic)
-            {
-                using (SqlConnection conn = new SqlConnection(connectionstring))
-                {
-                    conn.Open();
+            //public static void Add_picture(byte[] pic)
+            //{
+            //    using (SqlConnection conn = new SqlConnection(connectionstring))
+            //    {
+            //        conn.Open();
 
-                    string event_command = "dbo.add_picture1";
-                    SqlCommand cmd = new SqlCommand(event_command, conn);
+            //        string event_command = "dbo.add_picture1";
+            //        SqlCommand cmd = new SqlCommand(event_command, conn);
 
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    SqlCommandBuilder.DeriveParameters(cmd);
+            //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //        SqlCommandBuilder.DeriveParameters(cmd);
 
-                    cmd.Parameters["Image"].Value = pic;
+            //        cmd.Parameters["Image"].Value = pic;
 
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            //        cmd.ExecuteNonQuery();
+            //    }
+            //}
         }
         public static class Buy_tickets
         {

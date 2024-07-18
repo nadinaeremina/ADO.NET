@@ -15,15 +15,13 @@ namespace Exam
         public int Id { get; set; }
         public Event_name event_name { get; set; }
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime Date_ { get; set; }
         public Place place { get; set; }
         [Required]
-        public DateTime Time { get; set; }
-        [Required]
-        public string Description { get; set; }
+        public string Description_ { get; set; }
         [Required]
         public int Min_age { get; set; }
-        public byte[] Image { get; set; } 
+        public byte[] Image_ { get; set; } 
         [Required]
         public int Max_tickets { get; set; }
         [Required]
